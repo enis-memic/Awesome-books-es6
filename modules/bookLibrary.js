@@ -27,7 +27,7 @@ export default class Library {
     removeBtn.addEventListener('click', () => {
       removeBtn.parentElement.remove();
       this.removeListBook(book);
-      this.setBooksLocal();
+      this.booksSetLocal();
     });
   }
 
@@ -60,7 +60,7 @@ export default class Library {
       const book = new BookClass(this.titleInput.value, this.authorInput.value);
       this.booksData.push(book);
       this.createElement(book);
-      this.setBooksLocal();
+      this.booksSetLocal();
       this.titleInput.value = '';
       this.authorInput.value = '';
     });
